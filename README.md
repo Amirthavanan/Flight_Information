@@ -1,4 +1,4 @@
 # Flight_Information
-Flight details searching application - <a href="https://flightinformation-7ltu4zggouufxuz3e7qlbf.streamlit.app/">Click here</a><br>
+Realtime flight details searching application - <a href="https://flightinformation-7ltu4zggouufxuz3e7qlbf.streamlit.app/">Click here</a><br>
 <h3>Preview:</h3><br>
 <img src="image.png">
