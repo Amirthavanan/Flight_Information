@@ -8,7 +8,7 @@ from sqlalchemy.exc import SQLAlchemyError
 try:
     DB_URL = st.secrets["DB_URL"]
 except (FileNotFoundError, KeyError):
-    DB_URL = "mysql+pymysql://root:mysql@localhost/flight_app1"
+    DB_URL = "mysql+pymysql://PLEASE_SET_TIDB_URL_IN_STREAMLIT_SECRETS@localhost/flight_app1"
 
 engine = create_engine(
     DB_URL,

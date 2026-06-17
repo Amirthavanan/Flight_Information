@@ -12,7 +12,7 @@ import pymysql
 try:
     db_url = st.secrets["DB_URL"]
 except (FileNotFoundError, KeyError):
-    db_url = "mysql+pymysql://root:mysql@localhost/flight_app"
+    db_url = "mysql+pymysql://PLEASE_SET_TIDB_URL_IN_STREAMLIT_SECRETS@localhost/flight_app"
 
 engine = create_engine(
     db_url,
