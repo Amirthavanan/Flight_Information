@@ -1,4 +1,26 @@
 # Flight_Information
 Realtime flight details searching application - <a href="https://flightinformation-7ltu4zggouufxuz3e7qlbf.streamlit.app/">Click here</a><br>
+<h3>Description</h3>
+A dynamic, end-to-end web application that allows users to search for real-time flight information globally. The application integrates with a live search API to pull real flight options (including airlines, duration, and pricing) and automatically stores user search history and flight details into a cloud-hosted relational database. It also features a comprehensive, interactive analytics dashboard that visualizes search trends, popular flight routes, and average pricing using advanced data manipulation and charting techniques.
+<br>
+The application is styled with a custom, premium UI featuring dark-mode gradients, glassmorphism effects, and responsive interactions, offering an enterprise-grade user experience.
+<h3>Tech Stack</h3>
+<li>
+  <ul>Frontend / User Interface: Streamlit (Python web framework), Custom CSS (for glassmorphism, animations, and gradient styling)
+</ul>
+  <ul>Backend / Core Logic: Python
+</ul>
+  <ul>Data Processing & Analytics: Pandas (for data manipulation, filtering, and metric calculation)
+</ul>
+  <ul>Database Management: TiDB (Cloud-hosted MySQL-compatible database)
+</ul>
+  <ul>Database Connector / ORM: SQLAlchemy & PyMySQL (with connection pooling)
+</ul>
+  <ul>External APIs: SerpAPI (Google Flights Engine) for retrieving live airline and flight data via HTTP requests (requests library)
+</ul>
+  <ul>Deployment: GitHub, Streamlit Community Cloud (with secure Streamlit Secrets management)
+</ul>
+</li>
+
 <h3>Preview:</h3><br>
 <img src="image.png">
