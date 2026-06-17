@@ -4,12 +4,17 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.exc import SQLAlchemyError
 
 
-DB_URL = "mysql+pymysql://root:mysql@localhost/flight_app1"
+# Load database URL securely from Streamlit secrets, with localhost as a fallback
+try:
+    DB_URL = st.secrets["DB_URL"]
+except (FileNotFoundError, KeyError):
+    DB_URL = "mysql+pymysql://root:mysql@localhost/flight_app1"
 
 engine = create_engine(
     DB_URL,
     isolation_level="AUTOCOMMIT",
-    pool_pre_ping=True
+    pool_pre_ping=True,
+    pool_recycle=3600
 )
 
 

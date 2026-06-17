@@ -8,8 +8,16 @@ API_KEY = "161819f2defb33b044905155db46df5fb41a093509224e706bc5880b21952101"
 from sqlalchemy import create_engine
 import pymysql
 
+# Load database URL securely from Streamlit secrets, with localhost as a fallback
+try:
+    db_url = st.secrets["DB_URL"]
+except (FileNotFoundError, KeyError):
+    db_url = "mysql+pymysql://root:mysql@localhost/flight_app"
+
 engine = create_engine(
-    'mysql+pymysql://root:mysql@localhost/flight_app'
+    db_url,
+    pool_pre_ping=True,
+    pool_recycle=3600
 )
 
 def save_search(origin, destination, travel_date):
